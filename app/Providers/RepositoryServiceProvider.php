@@ -14,6 +14,11 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
+            'App\Http\Interfaces\Admin\AdminInterface',
+            'App\Http\Repositories\Admin\AdminRepository'
+        );
+
+        $this->app->bind(
             'App\Http\Interfaces\HomeInterface',
             'App\Http\Repositories\HomeRepository'
         );
