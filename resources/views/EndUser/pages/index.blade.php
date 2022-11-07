@@ -1,4 +1,4 @@
-@extends('EndUser.layout.master')
+@extends('EndUser.master')
 
 @section('title')
     Touché
@@ -10,15 +10,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6 ">
-                    <div class="about-img"><img src="{{ asset('assetsEndUser/img/about.jpg') }}" class="img-responsive" alt=""></div>
+                    <div class="about-img"><img src="{{ asset('assetsEndUser/img/about.jpg') }}" class="img-responsive"
+                                                alt=""></div>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <div class="about-text">
                         <h2>Our Restaurant</h2>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec
+                            ornare diam commodo nibh.</p>
                         <h3>Awarded Chefs</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
+                            diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec
+                            ornare.</p>
                     </div>
                 </div>
             </div>
@@ -40,24 +45,32 @@
                         <h2 class="menu-section-title">Breakfast & Starters</h2>
                         <hr>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $35 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $35</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,24 +79,32 @@
                         <h2 class="menu-section-title">Main Course</h2>
                         <hr>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $45 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $45</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,24 +115,32 @@
                         <h2 class="menu-section-title">Dinner</h2>
                         <hr>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $45 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $45</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $350 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $350</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam..
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,24 +149,32 @@
                         <h2 class="menu-section-title">Coffee & Drinks</h2>
                         <hr>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $35 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $35</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-item-name"> Delicious Dish </div>
-                            <div class="menu-item-price"> $30 </div>
-                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+                            <div class="menu-item-name"> Delicious Dish</div>
+                            <div class="menu-item-price"> $30</div>
+                            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                duis sed dapibus leo nec ornare diam.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,7 +215,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -189,7 +227,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -200,7 +239,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -211,7 +251,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -222,7 +263,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -233,7 +275,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -244,7 +287,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -255,7 +299,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -266,7 +311,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -277,7 +323,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -288,7 +335,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -299,7 +347,8 @@
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a>
+                                    <img src="{{asset('')}}img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -319,10 +368,11 @@
                 <div id="row">
                     <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/01.jpg" alt="..."></div>
+                            <div class="team-img"><img src="{{asset('')}}img/team/01.jpg" alt="..."></div>
                             <div class="caption">
                                 <h3>Mike Doe</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
+                                    ornare diam.</p>
                             </div>
                         </div>
                     </div>
@@ -331,7 +381,8 @@
                             <div class="team-img"><img src="img/team/02.jpg" alt="..."></div>
                             <div class="caption">
                                 <h3>Chris Doe</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
+                                    ornare diam.</p>
                             </div>
                         </div>
                     </div>
@@ -340,7 +391,8 @@
                             <div class="team-img"><img src="img/team/03.jpg" alt="..."></div>
                             <div class="caption">
                                 <h3>Ethan Doe</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
+                                    ornare diam.</p>
                             </div>
                         </div>
                     </div>
@@ -367,19 +419,22 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                                <input type="text" id="name" class="form-control" placeholder="Name"
+                                       required="required">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                                <input type="email" id="email" class="form-control" placeholder="Email"
+                                       required="required">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message"
+                                  required></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                     <div id="success"></div>

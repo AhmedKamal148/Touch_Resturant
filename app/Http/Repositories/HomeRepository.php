@@ -9,6 +9,6 @@ class HomeRepository implements HomeInterface
 
     public function index()
     {
-        return view('EndUser.index');
+        return view('EndUser.pages.index');
     }
 }
