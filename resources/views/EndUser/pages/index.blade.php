@@ -3,7 +3,21 @@
 @section('title')
     Touché
 @endsection
-
+<!-- Header -->
+<header id="header">
+    <div class="intro">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="intro-text">
+                        <h1>Touché</h1>
+                        <p>Restaurant / Coffee / Pub</p>
+                        <a href="#about" class="btn btn-custom btn-lg page-scroll">Discover Story</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 @section('content')
     <!-- About Section -->
     <div id="about">
@@ -211,11 +225,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/01-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/01-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/01-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -223,11 +237,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 dinner">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/02-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/02-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/02-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -235,11 +249,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/03-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/03-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/03-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -247,11 +261,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/04-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/04-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/04-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -259,11 +273,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 dinner">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/05-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/05-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/05-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -271,11 +285,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 lunch">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/06-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/06-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/06-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -283,11 +297,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 lunch">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/07-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/07-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/07-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -295,11 +309,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/08-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/08-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/08-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -307,11 +321,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 dinner">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/09-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/09-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/09-small.jpg')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -319,11 +333,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 lunch">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/10-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/10-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/10-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -331,11 +345,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 lunch">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/11-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/11-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/11-small.jpg')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -343,11 +357,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
                         <div class="portfolio-item">
                             <div class="hover-bg">
-                                <a href="img/portfolio/12-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                                <a href="{{asset('assetsEndUser/img/portfolio/12-large.jpg')}}" title="Dish Name" data-lightbox-gallery="gallery1">
                                     <div class="hover-text">
                                         <h4>Dish Name</h4>
                                     </div>
-                                    <img src="{{asset('')}}img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title">
+                                    <img src="{{asset('assetsEndUser/img/portfolio/12-small.jpg ')}}" class="img-responsive" alt="Project Title">
                                 </a>
                             </div>
                         </div>
@@ -368,7 +382,7 @@
                 <div id="row">
                     <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="{{asset('')}}img/team/01.jpg" alt="..."></div>
+                            <div class="team-img"><img src="{{asset('assetsEndUser/img/team/01.jpg')}}" alt="..."></div>
                             <div class="caption">
                                 <h3>Mike Doe</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
@@ -378,7 +392,7 @@
                     </div>
                     <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/02.jpg" alt="..."></div>
+                            <div class="team-img"><img src="{{asset('assetsEndUser/img/team/02.jpg')}}" alt="..."></div>
                             <div class="caption">
                                 <h3>Chris Doe</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
@@ -388,7 +402,7 @@
                     </div>
                     <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/03.jpg" alt="..."></div>
+                            <div class="team-img"><img src="{{asset('assetsEndUser/img/team/03.jpg')}}" alt="..."></div>
                             <div class="caption">
                                 <h3>Ethan Doe</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec
