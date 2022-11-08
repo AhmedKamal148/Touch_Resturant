@@ -23,4 +23,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('index', [AdminController::class, 'index'])->name('index');
 });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/menu', [HomeController::class, 'menu'])->name('menu');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/chefs', [HomeController::class, 'chefs'])->name('chefs');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
