@@ -18,4 +18,24 @@ class HomeController extends Controller
         return $this->homeInterface->index();
     }
 
+    public function menu()
+    {
+        return $this->homeInterface->menu();
+    }
+
+    public function gallery()
+    {
+        return $this->homeInterface->gallery();
+    }
+
+    public function chefs()
+    {
+        return $this->homeInterface->chefs();
+    }
+
+    public function contact()
+    {
+        return $this->homeInterface->contact();
+    }
+
 }
