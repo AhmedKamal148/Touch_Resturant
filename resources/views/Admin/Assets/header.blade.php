@@ -19,7 +19,7 @@
     <link href="{{asset('assetsAdmin/plugins/apex/apexcharts.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assetsAdmin/assets/css/dashboard/dash_1.css')}}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-
+@yield('css')
 </head>
 <body class="alt-menu sidebar-noneoverflow">
 <!-- BEGIN LOADER -->

@@ -10,11 +10,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{route('home')}}" class="page-scroll">Home</a></li>
-                <li><a href="{{route('menu')}}" class="page-scroll">Menu</a></li>
-                <li><a href="{{route('gallery')}}" class="page-scroll">Gallery</a></li>
-                <li><a href="{{route('chefs')}}" class="page-scroll">Chefs</a></li>
-                <li><a href="{{route('contact')}}" class="page-scroll">Contact</a></li>
+                <li><a href="{{route('endUser.home')}}" class="page-scroll">Home</a></li>
+                <li><a href="{{route('endUser.menu')}}" class="page-scroll">Menu</a></li>
+                <li><a href="{{route('endUser.gallery')}}" class="page-scroll">Gallery</a></li>
+                <li><a href="{{route('endUser.chefs')}}" class="page-scroll">Chefs</a></li>
+                <li><a href="{{route('endUser.contact')}}" class="page-scroll">Contact</a></li>
             </ul>
         <!-- /.navbar-collapse -->
     </div>

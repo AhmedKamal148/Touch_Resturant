@@ -19,6 +19,7 @@
 <script src="{{asset('assetsAdmin/plugins/apex/apexcharts.min.js')}}"></script>
 <script src="{{asset('assetsAdmin/assets/js/dashboard/dash_1.js')}}"></script>
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
+@include('sweetalert::alert')
+@stack('js')
 </body>
 </html>
