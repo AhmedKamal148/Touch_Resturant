@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EndUser\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,6 @@ Route::group(['prefix' => '/', 'as' => 'endUser.'], function () {
         Route::get('/contact',  'contact')->name('contact');
     });
 
-
+    Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
 });
 

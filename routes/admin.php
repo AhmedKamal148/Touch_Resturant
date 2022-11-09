@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\Admin\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,22 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
             Route::delete('delete/{category}', 'delete')->name('delete');
         });
     });
+
+    Route::group([
+        'as' => 'contact_us.',
+        'prefix' => 'contact-us',
+        'controller' => ContactUsController::class
+    ], function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{contact}', 'show')->name('show');
+    });
+
+    Route::group([
+        'as' => 'settings.',
+        'prefix' => 'settings',
+        'controller' => SettingController::class
+    ], function () {
+        Route::get('/', 'index')->name('index');
+        Route::put('/', 'update')->name('update');
+    });
 });
-
-
