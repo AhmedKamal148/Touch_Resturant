@@ -54,19 +54,23 @@ class MealRepository implements MealInterface
 
     public function update($request, $meal)
     {
-        $data_request = $request->except('image'); // Except Image From Data
+        if ($request->image) {
 
-        $this->delete_Images_From_Disk($meal->image); // Delete Image From Disk If that Not Default image;
+            $data_request = $request->except('image'); // Except Image From Data
 
-        $image_name_after_hash = $this->hash_Image_Name($request->image); //Hash Image Name
+            $this->delete_Images_From_Disk($meal->image); // Delete Image From Disk If that Not Default image;
 
-        $this->save_Image_Into_Disk($request->image, $image_name_after_hash); //Save Image Into Images Folder
+            $image_name_after_hash = $this->hash_Image_Name($request->image); //Hash Image Name
 
-        $data_request['image'] = $image_name_after_hash; // Append Image To $data_request
+            $this->save_Image_Into_Disk($request->image, $image_name_after_hash); //Save Image Into Images Folder
 
+            $data_request['image'] = $image_name_after_hash; // Append Image To $data_request
+        } else {
+            $data_request['image'] = $meal->image; // Append $meal->Image To $data_request
+
+        }
 
         $meal->update($data_request);
-
         Alert::toast('Update Meal Successfully', 'success');
         return redirect()->route('admin.meal.index');
     }
@@ -75,6 +79,7 @@ class MealRepository implements MealInterface
     {
         $this->delete_Images_From_Disk($meal->image);
         $meal->delete();
+        Alert::toast('Delete Meal Successfully', 'Danger');
         return redirect()->route('admin.meal.index');
 
     }

@@ -13,10 +13,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{route('endUser.home')}}" class="page-scroll">Home</a></li>
-                <li><a href="{{route('endUser.menu')}}" class="page-scroll">Menu</a></li>
-                <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-                <li><a href="{{route('endUser.chefs')}}" class="page-scroll">Chefs</a></li>
-                <li><a href="{{route('endUser.contact')}}" class="page-scroll">Contact</a></li>
+                <li><a href="#" class="page-scroll">Menu</a></li>
+                <li><a href="#" class="page-scroll">Gallery</a></li>
+                <li><a href="#" class="page-scroll">Chefs</a></li>
+                <li><a href="#" class="page-scroll">Contact</a></li>
             </ul>
             <!-- /.navbar-collapse -->
         </div>
