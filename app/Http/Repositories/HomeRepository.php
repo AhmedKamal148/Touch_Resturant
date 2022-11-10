@@ -3,24 +3,22 @@
 namespace App\Http\Repositories;
 
 use App\Http\Interfaces\HomeInterface;
+use App\Models\Meal;
 
 class HomeRepository implements HomeInterface
 {
 
     public function index()
     {
-        return view('EndUser.pages.index');
+        $meals = Meal::all();
+        return view('EndUser.pages.index', compact('meals'));
     }
 
     public function menu()
     {
-       dd('Welcome Menu');
+        dd('Welcome Menu');
     }
 
-    public function gallery()
-    {
-        dd('Welcome gallery');
-    }
 
     public function chefs()
     {
