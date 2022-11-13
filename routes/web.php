@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\Admin\CategoryController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EndUser\ContactUsController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,17 +16,11 @@ use App\Http\Controllers\EndUser\ContactUsController;
 */
 
 
-
 Route::group(['prefix' => '/', 'as' => 'endUser.'], function () {
     /*---Home Routes ---*/
     Route::controller(HomeController::class)->group(function () {
-        Route::get('/',  'index')->name('home');
-        Route::get('/menu',  'menu')->name('menu');
-        Route::get('/gallery',  'gallery')->name('gallery');
-        Route::get('/chefs',  'chefs')->name('chefs');
-        Route::get('/contact',  'contact')->name('contact');
+        Route::get('/', 'index')->name('home');
     });
 
     Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
 });
-
