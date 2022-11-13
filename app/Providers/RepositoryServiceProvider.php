@@ -33,6 +33,7 @@ class RepositoryServiceProvider extends ServiceProvider
             // Interface            // Repository
             'ContactUsInterface' => 'ContactUsRepository',
             'SettingInterface'   => 'SettingRepository',
+            'AuthInterface'      => 'AuthRepository'
         ];
 
         foreach ($adminRepos as $interface => $repo) {

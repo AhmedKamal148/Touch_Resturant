@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MealController;
 use App\Http\Controllers\Admin\AdminController;
@@ -19,7 +20,8 @@ use App\Http\Controllers\Admin\ContactUsController;
 */
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
+
     Route::get('index', [AdminController::class, 'index'])->name('index');
 
     /*--- Category Route ---*/
@@ -63,4 +65,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/', 'index')->name('index');
         Route::put('/', 'update')->name('update');
     });
+
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
+   Route::get('login', [AuthController::class, 'loginPage'])->name('auth.login-page');
+   Route::post('login', [AuthController::class, 'login'])->name('auth.login');
