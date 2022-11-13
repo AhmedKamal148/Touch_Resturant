@@ -22,7 +22,12 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Http\Interfaces\Admin\CategoryInterface',
             'App\Http\Repositories\Admin\CategoryRepository'
-        );
+        ); // Category
+
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\MealInterface',
+            'App\Http\Repositories\Admin\MealRepository'
+        ); // meal
 
         /*---- EndUser ----*/
         $this->app->bind(
