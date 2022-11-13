@@ -17,7 +17,7 @@ class MealRequest extends FormRequest
     {
         return [
             'name' => 'required|min:4|unique:meals,name',
-            'image' => 'required|image|unique:meals,image',
+            'image' => 'required|image|unique:meals,image|mimes:png,jpg,jpeg,webp',
             'meal_time' => 'required|min:5',
         ];
     }
@@ -26,7 +26,7 @@ class MealRequest extends FormRequest
     {
         return [
             'name' => 'min:4|unique:meals,name,' . $this->meal->id,
-            'image' => 'image|unique:meals,image,' . $this->meal->id,
+            'image' => 'image|mimes:png,jpg,jpeg,webp|unique:meals,image,' . $this->meal->id,
             'meal_time' => 'required|min:5',
         ];
     }

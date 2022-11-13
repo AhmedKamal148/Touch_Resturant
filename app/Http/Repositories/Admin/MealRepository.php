@@ -4,6 +4,7 @@ namespace App\Http\Repositories\Admin;
 
 use App\Http\Interfaces\Admin\MealInterface;
 use App\Http\Traits\handelMealImage;
+use App\Http\Traits\MealTrait;
 use App\Models\Meal;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -12,7 +13,7 @@ class MealRepository implements MealInterface
 {
     private $mealModel;
 
-    use handelMealImage;
+    use handelMealImage, MealTrait;
 
     public function __construct(Meal $meal)
     {
@@ -21,7 +22,7 @@ class MealRepository implements MealInterface
 
     public function index()
     {
-        $meals = Meal::paginate(5);
+        $meals = $this->getAllMeals();
         return view('Admin.meal.index', compact('meals'));
     }
 
