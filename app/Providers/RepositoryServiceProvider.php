@@ -29,11 +29,37 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Http\Repositories\Admin\MealRepository'
         ); // meal
 
+        $adminRepos = [
+            // Interface            // Repository
+            'ContactUsInterface' => 'ContactUsRepository',
+            'SettingInterface'   => 'SettingRepository',
+        ];
+
+        foreach ($adminRepos as $interface => $repo) {
+            $this->app->bind(
+                "App\Http\Interfaces\Admin\\" . $interface,
+                "App\Http\Repositories\Admin\\" . $repo
+            );
+        }
+
         /*---- EndUser ----*/
         $this->app->bind(
             'App\Http\Interfaces\HomeInterface',
             'App\Http\Repositories\HomeRepository'
         );
+
+        $adminRepos = [
+            // Interface            // Repository
+            'ContactUsInterface' => 'ContactUsRepository',
+            'SettingInterface'   => 'SettingRepository',
+        ];
+
+        foreach ($adminRepos as $interface => $repo) {
+            $this->app->bind(
+                "App\Http\Interfaces\EndUser\\" . $interface,
+                "App\Http\Repositories\EndUser\\" . $repo
+            );
+        }
     }
 
     /**

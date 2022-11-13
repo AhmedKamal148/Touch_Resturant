@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EndUser\ContactUsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,5 @@ Route::group(['prefix' => '/', 'as' => 'endUser.'], function () {
         Route::get('/', 'index')->name('home');
     });
 
-
+    Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
 });
-

@@ -3,22 +3,22 @@
         <div class="col-md-4">
             <h3>Address</h3>
             <div class="contact-item">
-                <p>4321 California St,</p>
-                <p>San Francisco, CA 12345</p>
+                <p>{{ settings()->first_address }}</p>
+                <p>{{ settings()->second_address }}</p>
             </div>
         </div>
         <div class="col-md-4">
             <h3>Opening Hours</h3>
             <div class="contact-item">
-                <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
-                <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
+                <p>{{ settings()->opening_hours_1 }}</p>
+                <p>{{ settings()->opening_hours_2 }}</p>
             </div>
         </div>
         <div class="col-md-4">
             <h3>Contact Info</h3>
             <div class="contact-item">
-                <p>Phone: +1 123 456 1234</p>
-                <p>Email: info@company.com</p>
+                <p>Phone: {{ settings()->contact_phone }}</p>
+                <p>Email: {{ settings()->contact_email }}</p>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
                 </ul>
             </div>
             <p>&copy; 2016 Touché. All rights reserved. Designed by <a href="http://www.templatewire.com"
-                                                                       rel="nofollow">TemplateWire</a></p>
+                    rel="nofollow">TemplateWire</a></p>
         </div>
     </div>
 </div>
@@ -44,5 +44,7 @@
 <script type="text/javascript" src="{{ asset('assetsEndUser/js/jqBootstrapValidation.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assetsEndUser/js/contact_me.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assetsEndUser/js/main.js') }}"></script>
+@include('sweetalert::alert')
 </body>
+
 </html>

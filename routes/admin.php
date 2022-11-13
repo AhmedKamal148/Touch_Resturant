@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\MealController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\MealController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +46,21 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         });
     });
 
+    Route::group([
+        'as' => 'contact_us.',
+        'prefix' => 'contact-us',
+        'controller' => ContactUsController::class
+    ], function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{contact}', 'show')->name('show');
+    });
+
+    Route::group([
+        'as' => 'settings.',
+        'prefix' => 'settings',
+        'controller' => SettingController::class
+    ], function () {
+        Route::get('/', 'index')->name('index');
+        Route::put('/', 'update')->name('update');
+    });
 });
-
-
