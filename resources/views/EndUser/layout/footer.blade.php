@@ -7,6 +7,7 @@
                 <p>{{ settings()->second_address }}</p>
             </div>
         </div>
+
         <div class="col-md-4">
             <h3>Opening Hours</h3>
             <div class="contact-item">
@@ -14,6 +15,7 @@
                 <p>{{ settings()->opening_hours_2 }}</p>
             </div>
         </div>
+
         <div class="col-md-4">
             <h3>Contact Info</h3>
             <div class="contact-item">
@@ -21,6 +23,7 @@
                 <p>Email: {{ settings()->contact_email }}</p>
             </div>
         </div>
+
     </div>
     <div class="container-fluid text-center copyrights">
         <div class="col-md-8 col-md-offset-2">
