@@ -29,6 +29,16 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Http\Repositories\Admin\MealRepository'
         ); // meal
 
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\AdminChefInterface',
+            'App\Http\Repositories\Admin\AdminChefRepository'
+        );
+
+        $this->app->bind(
+            'App\Http\Interfaces\Admin\UserProfileInterface',
+            'App\Http\Repositories\Admin\UserProfileRepository'
+        );
+
         $adminRepos = [
             // Interface            // Repository
             'ContactUsInterface' => 'ContactUsRepository',

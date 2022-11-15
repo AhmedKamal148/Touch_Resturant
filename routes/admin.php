@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminChefController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\UserProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MealController;
 use App\Http\Controllers\Admin\AdminController;
@@ -33,6 +35,27 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
             Route::get('edit/{category}', 'edit')->name('edit');
             Route::put('update/{category}', 'update')->name('update');
             Route::delete('delete/{category}', 'delete')->name('delete');
+        });
+    });
+
+    /*--- Chef Routes ---*/
+    Route::group(['prefix' => 'chef', 'as' => 'chef.'], function () {
+        Route::controller(AdminChefController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/create', 'create')->name('create');
+            Route::post('/store', 'store')->name('store');
+            Route::delete('/delete', 'delete')->name('delete');
+            Route::post('/update', 'update')->name('update');
+            Route::put('/edit', 'edit')->name('edit');
+        });
+    });
+
+    /*----- User Profile Routes -----*/
+    Route::group(['prefix' => 'user_profile', 'as' => 'user_profile.'], function () {
+        Route::controller(UserProfileController::class)->group(function () {
+            Route::get('/','index')->name('index');
+            Route::get('edit','edit')->name('edit');
+            Route::put('update','update')->name('update');
         });
     });
 
