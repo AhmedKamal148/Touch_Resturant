@@ -2,7 +2,7 @@
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assetsAdmin/assets/css/forms/theme-checkbox-radio.css') }}">
     <link href="{{ asset('assetsAdmin/assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css"/>
-  
+
     <link href="{{asset('assetsAdmin/plugins/bootstrap-select/bootstrap-select.min.css')}}" rel="stylesheet"
           type="text/css">
 
@@ -93,7 +93,7 @@
                         </div>
                         {{--Widget-Footer--}}
                         <div class="widget-footer py-3 px-4">
-                            <div class="d-flex justify-content-end">
+                            <div class="d-flex justify-content-center">
                                 <div class="show_meals ">
                                     <a href="{{route('admin.meal.index')}}"
                                        class="btn btn-outline-dark btn-lg btn-rounded">Show

@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{route('endUser.home')}}" class="page-scroll">Home</a></li>
                 <li><a href="#" class="page-scroll">Menu</a></li>
-                <li><a href="#" class="page-scroll">Gallery</a></li>
+                <li><a href="#gallery" class="page-scroll">Gallery</a></li>
                 <li><a href="#" class="page-scroll">Chefs</a></li>
                 <li><a href="#" class="page-scroll">Contact</a></li>
             </ul>

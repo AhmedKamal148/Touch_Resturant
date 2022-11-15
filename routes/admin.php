@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\Admin\AuthController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\MealController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\Admin\MealController;
+use App\Http\Controllers\Admin\SettingController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +47,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
             Route::delete('destroy/{meal}', 'destroy')->name('destroy');
         });
     });
-
+    /*--- Contact Route ---*/
     Route::group([
         'as' => 'contact_us.',
         'prefix' => 'contact-us',
@@ -56,7 +56,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
         Route::get('/', 'index')->name('index');
         Route::get('/{contact}', 'show')->name('show');
     });
-
+    /*--- Setting Route ---*/
     Route::group([
         'as' => 'settings.',
         'prefix' => 'settings',
@@ -68,5 +68,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
 
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
-   Route::get('login', [AuthController::class, 'loginPage'])->name('auth.login-page');
-   Route::post('login', [AuthController::class, 'login'])->name('auth.login');
+
+/*--- Auth Routes ---*/
+Route::get('login', [AuthController::class, 'loginPage'])->name('auth.login-page');
+Route::post('login', [AuthController::class, 'login'])->name('auth.login');

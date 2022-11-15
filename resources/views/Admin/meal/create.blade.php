@@ -89,7 +89,7 @@
                         </div>
                         {{--Widget-Footer--}}
                         <div class="widget-footer py-3 px-4">
-                            <div class="d-flex justify-content-end">
+                            <div class="d-flex justify-content-center">
                                 <div class="show_meals ">
                                     <a href="{{route('admin.meal.index')}}"
                                        class="btn btn-outline-dark btn-lg btn-rounded">Show

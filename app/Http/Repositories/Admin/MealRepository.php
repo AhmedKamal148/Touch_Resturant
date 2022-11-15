@@ -22,7 +22,7 @@ class MealRepository implements MealInterface
 
     public function index()
     {
-        $meals = $this->getAllMeals();
+        $meals = $this->getAllMeals(5);
         return view('Admin.meal.index', compact('meals'));
     }
 

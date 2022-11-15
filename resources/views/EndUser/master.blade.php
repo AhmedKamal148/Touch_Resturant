@@ -3,7 +3,6 @@
 
 @include('EndUser.layout.navbar')
 
-
 @yield('content')
 
 
