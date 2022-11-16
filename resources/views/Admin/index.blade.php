@@ -565,4 +565,3 @@
     </div>
     <!--  END CONTENT AREA  -->
 @endsection
-
