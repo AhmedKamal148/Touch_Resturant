@@ -8,7 +8,7 @@
 <script src="{{asset('assetsAdmin/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
 <script src="{{asset('assetsAdmin/assets/js/app.js')}}"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         App.init();
     });
 </script>
@@ -19,7 +19,10 @@
 <script src="{{asset('assetsAdmin/plugins/apex/apexcharts.min.js')}}"></script>
 <script src="{{asset('assetsAdmin/assets/js/dashboard/dash_1.js')}}"></script>
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
 @include('sweetalert::alert')
+
 @stack('js')
+
 </body>
 </html>

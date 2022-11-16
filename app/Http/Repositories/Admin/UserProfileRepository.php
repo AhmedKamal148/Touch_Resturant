@@ -19,12 +19,12 @@ class UserProfileRepository implements UserProfileInterface
 
     public function index()
     {
-        return view('Admin.user_profile.index');
+        return view('Admin.profile.index');
     }
 
     public function edit()
     {
-        return view('Admin.user_profile.user_account_setting');
+        return view('Admin.profile.user_account_setting');
     }
 
     public function update($request)
@@ -38,7 +38,7 @@ class UserProfileRepository implements UserProfileInterface
             'phone' => $request->phone
         ]);
 
-        toast('User Was Updated !','success');
-        return redirect(route('admin.user_profile.index'));
+        toast('User Was Updated !', 'success');
+        return redirect(route('admin.profile.index'));
     }
 }

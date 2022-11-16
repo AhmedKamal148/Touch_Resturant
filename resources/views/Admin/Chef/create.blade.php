@@ -1,108 +1,119 @@
+@extends('Admin.Assets.master')
+
 @section('title')
     Chef | Create
 @endsection
 
-@section('css')
+
+@push('css')
 
     <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
-    <link href="{{asset('assetsAdmin/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assetsAdmin/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css"/>
     <!-- END PAGE LEVEL CUSTOM STYLES -->
 
     <!--  BEGIN CUSTOM STYLE FILE  -->
-    <link href="{{asset('assetsAdmin/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assetsAdmin/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assetsAdmin/assets/css/forms/theme-checkbox-radio.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assetsAdmin/assets/css/forms/switches.css')}}">
     <!--  END CUSTOM STYLE FILE  -->
 
     <!-- BEGIN PAGE LEVEL STYLES -->
-    <link href="{{asset('assetsAdmin/plugins/file-upload/file-upload-with-preview.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assetsAdmin/plugins/file-upload/file-upload-with-preview.min.css')}}" rel="stylesheet"
+          type="text/css"/>
     <!-- END PAGE LEVEL STYLES -->
+@endpush
 
-@endsection
 
-@extends('Admin.Assets.master')
 
 @section('content')
 
-        <!--  BEGIN CONTENT AREA  -->
-        <div id="content" class="main-content">
+    <!--  BEGIN CONTENT AREA  -->
+    <div id="content" class="main-content">
+        <div class="container">
             <div class="container">
-                <div class="container">
 
-                    <div class="row">
+                <div class="row">
 
-                        <div id="flLoginForm" class="col-lg-12 layout-spacing layout-top-spacing">
-                            <div class="statbox widget box box-shadow">
-                                <div class="widget-header">
-                                    <div class="row">
-                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Create Chef</h4>
-                                        </div>
+                    <div id="flLoginForm" class="col-lg-12 layout-spacing layout-top-spacing">
+                        <div class="statbox widget box box-shadow">
+                            <div class="widget-header">
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                        <h4>Create Chef</h4>
                                     </div>
                                 </div>
-                                <div class="widget-content widget-content-area">
-                                    <form action="{{route('admin.chef.store')}}" method="post" enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="form-group mb-4">
-                                            <input type="text" name="name" value="{{old('name')}}" class="form-control @error('name') is-invalid @enderror" placeholder="Full Name">
+                            </div>
+                            <div class="widget-content widget-content-area">
+                                <form action="{{route('admin.chef.store')}}" method="post"
+                                      enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="form-group mb-4">
+                                        <input type="text" name="name" value="{{old('name')}}"
+                                               class="form-control @error('name') is-invalid @enderror"
+                                               placeholder="Full Name">
+                                    </div>
+
+                                    @error('name')
+                                    <div class="alert alert-danger mt-1" role="alert">
+                                        <div class="alert-body">
+                                            {{ $message }}
                                         </div>
+                                    </div>
+                                    @enderror
 
-                                        @error('name')
-                                        <div class="alert alert-danger mt-1" role="alert">
-                                            <div class="alert-body">
-                                                {{ $message }}
-                                            </div>
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Description</span>
                                         </div>
-                                        @enderror
+                                        <textarea class="form-control @error('description') is-invalid @enderror"
+                                                  name="description"
+                                                  aria-label="With textarea">{{old('description')}}</textarea>
+                                    </div>
 
-                                        <div class="input-group mb-4">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Description</span>
-                                            </div>
-                                            <textarea class="form-control @error('description') is-invalid @enderror" name="description" aria-label="With textarea">{{old('description')}}</textarea>
+                                    @error('description')
+                                    <div class="alert alert-danger mt-1" role="alert">
+                                        <div class="alert-body">
+                                            {{ $message }}
                                         </div>
+                                    </div>
+                                    @enderror
 
-                                        @error('description')
-                                        <div class="alert alert-danger mt-1" role="alert">
-                                            <div class="alert-body">
-                                                {{ $message }}
-                                            </div>
+                                    <div class="custom-file-container" data-upload-id="myFirstImage">
+                                        <label>Upload Image <a href="javascript:void(0)"
+                                                               class="custom-file-container__image-clear"
+                                                               title="Clear Image">x</a></label>
+                                        <label class="custom-file-container__custom-file">
+                                            <input type="file" name="image"
+                                                   class="custom-file-container__custom-file__custom-file-input @error('image') is-invalid @enderror"
+                                                   accept="image/*">
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>
+                                            <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                        </label>
+                                        <div class="custom-file-container__image-preview"></div>
+                                    </div>
+
+                                    @error('image')
+                                    <div class="alert alert-danger mt-1" role="alert">
+                                        <div class="alert-body">
+                                            {{ $message }}
                                         </div>
-                                        @enderror
+                                    </div>
+                                    @enderror
 
-                                        <div class="custom-file-container" data-upload-id="myFirstImage">
-                                            <label>Upload Image <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
-                                            <label class="custom-file-container__custom-file" >
-                                                <input type="file" name="image" class="custom-file-container__custom-file__custom-file-input @error('image') is-invalid @enderror" accept="image/*">
-                                                <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-                                                <span class="custom-file-container__custom-file__custom-file-control"></span>
-                                            </label>
-                                            <div class="custom-file-container__image-preview"></div>
-                                        </div>
+                                    <button type="submit" class="btn btn-primary mt-4">Send</button>
 
-                                        @error('image')
-                                        <div class="alert alert-danger mt-1" role="alert">
-                                            <div class="alert-body">
-                                                {{ $message }}
-                                            </div>
-                                        </div>
-                                        @enderror
+                                </form>
 
-                                        <button type="submit" class="btn btn-primary mt-4">Send</button>
-
-                                    </form>
-
-                                </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
+
             </div>
         </div>
-        <!--  END CONTENT AREA  -->
-
+    </div>
+    <!--  END CONTENT AREA  -->
 
 @endsection
 

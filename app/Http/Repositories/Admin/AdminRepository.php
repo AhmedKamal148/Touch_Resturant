@@ -8,6 +8,6 @@ class AdminRepository implements AdminInterface
 {
     public function index()
     {
-        return view('Admin.index');
+        return view('Admin.home.index');
     }
 }

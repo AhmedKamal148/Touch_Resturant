@@ -1,11 +1,15 @@
 @extends('Admin.Assets.master')
-@section('css')
+@section('title')
+    Meal | Edit
+@endsection
+
+@push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assetsAdmin/assets/css/forms/theme-checkbox-radio.css') }}">
     <link href="{{ asset('assetsAdmin/assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css"/>
 
     <link href="{{asset('assetsAdmin/plugins/bootstrap-select/bootstrap-select.min.css')}}" rel="stylesheet"
           type="text/css">
-@endsection
+@endpush
 
 @section('content')
 
@@ -50,7 +54,8 @@
                                                        class="custom-file-input"
                                                        id="browseImage">
 
-                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                                <label class="custom-file-label" for="customFile">Choose
+                                                    file</label>
                                             </div>
                                         </div>
                                         @error('image')

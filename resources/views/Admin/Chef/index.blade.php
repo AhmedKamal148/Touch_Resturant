@@ -1,16 +1,17 @@
+@extends('Admin.Assets.master')
 @section('title')
     Chef | Index
 @endsection
 
-@section('css')
+@push('css')
     <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
-    <link href="{{asset('assetsAdmin/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assetsAdmin/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assetsAdmin/assets/css/forms/theme-checkbox-radio.css')}}">
-    <link href="{{asset('assetsAdmin/assets/css/tables/table-basic.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assetsAdmin/assets/css/tables/table-basic.css')}}" rel="stylesheet" type="text/css"/>
     <!-- END PAGE LEVEL CUSTOM STYLES -->
-@endsection
+@endpush
 
-@extends('Admin.Assets.master')
+
 
 @section('content')
 
@@ -18,8 +19,7 @@
     <div id="content" class="main-content">
         <div class="container">
             <div class="container">
-            <div class="row layout-top-spacing">
-
+                <div class="row layout-top-spacing">
                     <div id="tableHover" class="col-lg-12 col-12 layout-spacing">
                         <div class="statbox widget box box-shadow">
                             <div class="widget-header">
@@ -46,31 +46,31 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($chefs as $chef)
-                                                <tr>
-                                                    <td>{{$chef->id}}</td>
-                                                    <td>{{$chef->name}}</td>
-                                                    <td>{{$chef->description}}</td>
-                                                    <td>
-                                                        <img width="150" src="{{asset($chef->image)}}" alt="chef">
-                                                    </td>
-                                                    <td>
-                                                        <form action="{{route('admin.chef.update')}}" method="post">
-                                                            @csrf
-                                                            <input type="hidden" name="id" value="{{$chef->id}}">
-                                                            <input type="submit" class="btn btn-primary" value="Update">
-                                                        </form>
-                                                    </td>
-                                                    <td>
-                                                        <form action="{{route('admin.chef.delete')}}" method="post">
-                                                            @csrf
-                                                            @method('delete')
-                                                            <input type="hidden" name="id" value="{{$chef->id}}">
-                                                            <input type="submit" class="btn btn-danger" value="Delete">
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
+                                        @foreach($chefs as $chef)
+                                            <tr>
+                                                <td>{{$chef->id}}</td>
+                                                <td>{{$chef->name}}</td>
+                                                <td>{{$chef->description}}</td>
+                                                <td>
+                                                    <img width="150" src="{{asset($chef->image)}}" alt="chef">
+                                                </td>
+                                                <td>
+                                                    <form action="{{route('admin.chef.update')}}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="id" value="{{$chef->id}}">
+                                                        <input type="submit" class="btn btn-primary" value="Update">
+                                                    </form>
+                                                </td>
+                                                <td>
+                                                    <form action="{{route('admin.chef.delete')}}" method="post">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <input type="hidden" name="id" value="{{$chef->id}}">
+                                                        <input type="submit" class="btn btn-danger" value="Delete">
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -80,7 +80,7 @@
                     </div>
 
                 </div>
-        </div>
+            </div>
         </div>
     </div>
     <!--  END CONTENT AREA  -->

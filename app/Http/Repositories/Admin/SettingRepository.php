@@ -8,7 +8,7 @@ class SettingRepository implements SettingInterface
 {
     public function index()
     {
-        return view('Admin.settings');
+        return view('Admin.home.settings');
     }
 
     public function update($request)

@@ -1,5 +1,5 @@
 @section('title')
-    Index
+    Home
 @endsection
 
 @extends('Admin.Assets.master')

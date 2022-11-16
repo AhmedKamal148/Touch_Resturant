@@ -3,7 +3,7 @@
 namespace App\Http\Repositories\Admin;
 
 use App\Http\Interfaces\Admin\MealInterface;
-use App\Http\Traits\handelMealImage;
+use App\Http\Traits\handelImage;
 use App\Http\Traits\MealTrait;
 use App\Models\Meal;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -13,7 +13,7 @@ class MealRepository implements MealInterface
 {
     private $mealModel;
 
-    use handelMealImage, MealTrait;
+    use handelImage, MealTrait;
 
     public function __construct(Meal $meal)
     {
@@ -33,15 +33,10 @@ class MealRepository implements MealInterface
 
     public function store($request)
     {
-        $data_request = $request->except('image'); // Except Image From Data
+        $data_request = $request->except('image');
+        $data_request['image'] = $this->image_func($request->image, 'meals', null);
 
-        $image_name_after_hash = $this->hash_Image_Name($request->image); //Hash Image Name
-
-        $this->save_Image_Into_Disk($request->image, $image_name_after_hash); //Save Image Into Images Folder
-
-        $data_request['image'] = $image_name_after_hash; // Append Image To $data_request
-
-        $this->mealModel->create($data_request); // Save Image Into Database
+        $this->mealModel->create($data_request);
 
         Alert::toast('Create Meal Successfully', 'success');
         return redirect(route('admin.meal.index'));
@@ -56,19 +51,11 @@ class MealRepository implements MealInterface
     public function update($request, $meal)
     {
         if ($request->image) {
+            $data_request = $request->except('image');
+            $data_request['image'] = $this->image_func($request->image, 'meals', $meal->image);
 
-            $data_request = $request->except('image'); // Except Image From Data
-
-            $this->delete_Images_From_Disk($meal->image); // Delete Image From Disk If that Not Default image;
-
-            $image_name_after_hash = $this->hash_Image_Name($request->image); //Hash Image Name
-
-            $this->save_Image_Into_Disk($request->image, $image_name_after_hash); //Save Image Into Images Folder
-
-            $data_request['image'] = $image_name_after_hash; // Append Image To $data_request
         } else {
-            $data_request['image'] = $meal->image; // Append $meal->Image To $data_request
-
+            $data_request['image'] = $meal->image;
         }
 
         $meal->update($data_request);
@@ -78,7 +65,7 @@ class MealRepository implements MealInterface
 
     public function destroy($meal)
     {
-        $this->delete_Images_From_Disk($meal->image);
+        $this->delete_Images_From_Disk($meal->image, 'meals');
         $meal->delete();
         Alert::toast('Delete Meal Successfully', 'Danger');
         return redirect()->route('admin.meal.index');

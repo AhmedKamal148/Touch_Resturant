@@ -1,32 +1,28 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminChefController;
-use App\Http\Controllers\Admin\AuthController;
-use App\Http\Controllers\Admin\UserProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\MealController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\Admin\MealController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\UserProfileController;
+use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|great
-*/
+
+/*--- Auth Routes ---*/
+Route::controller(AuthController::class)->group(function () {
+    Route::get('login', 'loginPage')->name('auth.login-page');
+    Route::post('login', 'login')->name('auth.login');
+});
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
-
+    /*--- Home Route ---*/
     Route::get('index', [AdminController::class, 'index'])->name('index');
 
-    /*--- Category Route ---*/
+    /*--- Category Routes ---*/
     Route::controller(CategoryController::class)->group(function () {
         Route::group(['prefix' => 'categories', 'as' => 'category.'], function () {
             Route::get('/', 'index')->name('index');
@@ -50,16 +46,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
         });
     });
 
-    /*----- User Profile Routes -----*/
-    Route::group(['prefix' => 'user_profile', 'as' => 'user_profile.'], function () {
+    /*--- Profile Routes ---*/
+    Route::group(['prefix' => 'profile', 'as' => 'profile.'], function () {
         Route::controller(UserProfileController::class)->group(function () {
-            Route::get('/','index')->name('index');
-            Route::get('edit','edit')->name('edit');
-            Route::put('update','update')->name('update');
+            Route::get('/', 'index')->name('index');
+            Route::get('edit', 'edit')->name('edit');
+            Route::put('update', 'update')->name('update');
         });
     });
 
-    /*--- meal Route ---*/
+    /*--- Meal Routes ---*/
     Route::controller(MealController::class)->group(function () {
         Route::group(['prefix' => 'meal', 'as' => 'meal.'], function () {
             Route::get('/', 'index')->name('index');
@@ -71,25 +67,23 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
         });
     });
 
-    Route::group([
-        'as' => 'contact_us.',
-        'prefix' => 'contact-us',
-        'controller' => ContactUsController::class
-    ], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('/{contact}', 'show')->name('show');
+    /*--- Contact Routes ---*/
+    Route::group(['prefix' => 'contact-us', 'as' => 'contact_us.'], function () {
+        Route::controller(ContactUsController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/{contact}', 'show')->name('show');
+        });
+
+    });
+    /*--- Settings Routes ---*/
+    Route::group(['prefix' => 'settings', 'as' => 'settings.'], function () {
+        Route::controller(SettingController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::put('/', 'update')->name('update');
+        });
     });
 
-    Route::group([
-        'as' => 'settings.',
-        'prefix' => 'settings',
-        'controller' => SettingController::class
-    ], function () {
-        Route::get('/', 'index')->name('index');
-        Route::put('/', 'update')->name('update');
-    });
-
+    /*--- Log_out Route ---*/
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
-   Route::get('login', [AuthController::class, 'loginPage'])->name('auth.login-page');
-   Route::post('login', [AuthController::class, 'login'])->name('auth.login');
+
