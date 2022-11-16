@@ -25,7 +25,7 @@
                                 <div class="hover-text">
                                     <h4>{{$meal->name}}</h4>
                                 </div>
-                                <img src="{{$meal->image_url}}" class="img-responsive"
+                                <img src="{{$meal->image_url}}" class="img-responsive img-fluid"
                                      alt="Project Title"
                                 >
                             </a>
